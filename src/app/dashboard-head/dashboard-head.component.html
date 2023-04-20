@@ -1,0 +1,50 @@
+
+<!-- Image by <a href="https://www.freepik.com/free-photo/front-view-beautiful-dog-with-copy-space_11524300.htm#query=dog%20header&position=48&from_view=search&track=ais">Freepik</a> -->
+<div class="container"  >
+  <div class="content">
+    <div class="title-div">
+    <img class="dog-img" [src]="isDesktopScreen || isLargeDesktopScreen ? desktop_header : tab_header"/>
+    <h1 class="mat-headline-1 title">Dogwiki</h1>
+  </div>
+  <p class="mat-body-1">Get to know more about your dog breed</p>
+  <form class="form">
+    <mat-form-field class="mat-form-field" appearance="outline"  >
+      <input type="text"
+             placeholder="Search your dog breed"
+             matInput
+             [formControl]="breedOption"
+             [matAutocomplete]="auto"
+             >
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
+        <mat-option *ngFor="let option of breeds | async" [value]="option.id">
+          {{option.name}}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+</div>
+<div class="bottom-content">
+  <p  class="mat-body-1 text">Most Searched Breeds</p>
+  <mat-divider class="mat-divider"></mat-divider>
+  <div class="breeds-text">
+    <h1 class="mat-headline-1" style="font-weight: bold;">66+ Breeds For you <br> to discover</h1>
+    <p class="see-more" routerLink="/top10">see more <mat-icon>arrow_right_alt</mat-icon></p>
+  </div>
+  <div *ngIf="isLoading" style="display: flex; align-items: center; justify-content: center;">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div class="photo-grid">
+    <div *ngFor="let object of top10| async" class="grid-item" [routerLink]="'/breeds/'+object.breed_id">
+      <!-- <div class="card"> -->
+        <div class="dog-list-img-wrapper">
+          <img class='dog-list-img'[src]="object.img_url" alt="Dog photo">
+        </div>
+          <p style="padding-left: 2%">{{object.name}}</p>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+</div>
+<app-dashboard-body></app-dashboard-body>

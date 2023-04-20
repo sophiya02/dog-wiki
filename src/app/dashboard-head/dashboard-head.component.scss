@@ -1,0 +1,214 @@
+.container{
+  // background: url('../../assets/header-md.png') no-repeat center center;
+  // background-image: url('../../assets/header-md.png');
+  background:  no-repeat top center/100% url('../../assets/header-md.png');
+  background-color: #E3E1DC;
+  border-radius: 25px;
+}
+.content{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 50%;
+  // height: 75vh;
+  padding: 14% 0 14% 14%;
+  flex-direction: column;
+  color: white;
+}
+.title-div{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3%;
+
+}
+.dog-img{
+  filter: invert(100%);
+  margin-right: 6%;
+
+}
+.title{
+  font-family: 'Mystery Quest', cursive;
+  margin-bottom: 0;
+  font-size: 4.5rem;
+}
+
+.mat-body-1{
+    font-size: 1.25rem;
+    margin-bottom: 3%;
+}
+
+input{
+  font-size: 1.05rem;
+  color: black;
+}
+
+.mat-form-field{
+  display: block;
+}
+
+.form{
+  width: 50%;
+}
+
+// ::ng-deep .mat-form-field-appearance-outline {
+//   width: 150%;
+// }
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+  background-color: #fffffff0;
+  border-radius: 7px;
+}
+
+
+::ng-deep mat-icon{
+  color: black;
+}
+
+@media screen and (max-width: 480px){
+  .container{
+    background:  no-repeat top center/100% url('../../assets/header-sm.png');
+
+  }
+  .content{
+    justify-content: start;
+    align-items: center;
+    padding: 25% 0 80% 0;
+    width: 100%;
+
+  }
+  .title{
+    font-size: 2.5rem;
+  }
+
+  .mat-body-1{
+      font-size: 1rem;
+  }
+  .dog-list-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .title{
+    font-size: 2rem;
+  }
+
+  .mat-body-1{
+      font-size: 1rem;
+  }
+  .dog-list-img {
+    width: 200px;
+    height: 200px;
+  }
+  // ::ng-deep .mat-form-field-appearance-outline {
+  //   width: 100%;
+  // }
+
+  .form{
+    width: 90%;
+  }
+
+
+}
+
+.bottom-content{
+  background-color: #E3E1DC;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 2% 5%
+}
+
+.dog-list-img{
+  border-radius: 24px;
+}
+
+.mat-divider{
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #4D270C;
+  margin-bottom: 2%;
+}
+
+.see-more{
+  display: flex
+}
+
+.see-more:hover{
+  cursor: pointer;
+}
+
+.breeds-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.photo-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// .dog-list-img {
+//   width: 300px;
+//   height: 300px;
+//   object-fit: cover;
+// }
+
+.grid-item {
+  width: 25%; /* Set the width to 25% to display 4 images in a row */
+  // padding-bottom: calc(100% / (1 / 1)); /* Change 3 / 4 to the aspect ratio of your image */
+}
+
+.grid-item:hover{
+  cursor: pointer;
+}
+
+.dog-list-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.dog-list-img-wrapper {
+  width: 100%;
+  // width: calc(100% / 4);
+  // height: calc(100% / 4);
+  padding-bottom: calc(100% / (1 / 1)); /* Change 3 / 4 to the aspect ratio of your image */
+  position: relative;
+}
+
+@media screen and (max-width: 480px){
+
+  .grid-item{
+    width: 100%;
+  }
+
+  .form{
+    width: 80%;
+  }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+  .grid-item{
+    width: 33%;
+  }
+
+}
+
+
+
+

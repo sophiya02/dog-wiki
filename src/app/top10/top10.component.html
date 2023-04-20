@@ -1,0 +1,28 @@
+<h1 class="mat-headline-1 top" style="font-weight: bold;">Top 10 most Searched dog breeds</h1>
+
+<div *ngIf="isLoading" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+
+  <img src="../../assets/dog_load.3a3190f9.gif">
+  <p>Loading...</p>
+</div>
+
+<div class="container" [style.flex-direction]="isMobileScreen? 'column': 'row'" *ngFor="let top of top10 | async">
+
+
+
+  <div class="img image2" [routerLink]="'/breeds/'+top.breed_id">
+    <img [src]="top.img_url" appExpand [url]="top.img_url">
+  </div>
+  <div class="text-content" >
+
+<mat-divider class="mat-divider"></mat-divider>
+<div class="breeds-text">
+  <h1 class="mat-headline-1" style="font-weight: bold;" [routerLink]="'/breeds/'+top.breed_id">{{top.number}}. {{top.name}}</h1>
+
+  <p [style.display]='top.description=="0"? "none": "block"'>{{top.description}}</p>
+
+</div>
+  </div>
+
+</div>
+

@@ -1,0 +1,12 @@
+.box-list{
+  display: flex;
+  flex-direction: row;
+}
+.box{
+  display: flex;
+  margin: 0% 1%;
+  border-radius: 16px;
+  width: 4rem;
+  height: 0.6rem;
+  flex-direction: row;
+}
