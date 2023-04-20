@@ -4,10 +4,10 @@ const {BadRequestError} = require('../error/badRequest')
 const errorHandler = (err, req, res, next) => {
   console.log('inside error handler');
 
-  if (err instanceof BadRequestError) {
-    console.log('inside bad-req handler');
-    return res.status(err.statusCode).json({ msg: err.message });
-  }
+  // if (err instanceof BadRequestError) {
+  //   console.log('inside bad-req handler');
+  //   return res.status(err.statusCode).json({ msg: err.message });
+  // }
 
   // handle other types of errors
   let customError = {
