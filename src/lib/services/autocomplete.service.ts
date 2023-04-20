@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { filter, map, Observable, tap } from 'rxjs';
 import { Breeds, Top10, Breed, BreedImage } from '../models/models';
 
-const url = 'http://localhost:3000/api/v1';
+const url = 'https://dog-wiki-backend.onrender.com/api/v1';
 const api_key ="live_QbqRTaWtOQtvMQrPVp2MFpVU7z9i2GvfMrxHluMG3SWs8eyqtkMr5i7Xu9vjPemJ";
 @Injectable({
   providedIn: 'root'
