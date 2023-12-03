@@ -4,52 +4,52 @@
   <p>Loading...</p>
 </div>
 
-<div  *ngIf="breed | async as breed" >
+<div *ngIf="breed | async as breed">
 
-  <div class="container" [style.flex-direction]="isMobileScreen ? 'column' : 'row'" >
-      <div class="image2"><img [src]="breed.breed_image_url.url" appExpand [url]="breed.breed_image_url.url"></div>
-      <div class="text-content">
-        <mat-divider class="mat-divider"></mat-divider>
-        <div class="breeds-text">
-          <h1 class="mat-headline-1" style="font-weight: bold">
-            {{ breed.breedDetails.name }}
-          </h1>
+  <div class="container" [style.flex-direction]="isMobileScreen ? 'column' : 'row'">
+    <div class="image2"><img [src]="breed.breed_image_url.url" appExpand [url]="breed.breed_image_url.url"></div>
+    <div class="text-content">
+      <mat-divider class="mat-divider"></mat-divider>
+      <div class="breeds-text">
+        <h1 class="mat-headline-1" style="font-weight: bold">
+          {{ breed.breedDetails.name }}
+        </h1>
 
-          <p>{{ breed.breedDetails.description }}</p>
+        <p>{{ breed.breedDetails.description }}</p>
 
-          <p class="mat-body">
-            <span style="font-weight: bold">Temparament: </span>
-            {{ breed.breedDetails.temperament }}
-          </p>
-          <p class="mat-body">
-            <span style="font-weight: bold">Origin: </span>
-            {{ breed.breedDetails.origin }}
-          </p>
-          <p class="mat-body">
-            <span style="font-weight: bold">Life Span: </span>
-            {{ breed.breedDetails.life_span }}
-          </p>
-          <p class="mat-body">
-            <span style="font-weight: bold">Adaptability: </span>
-            <app-rating-boxes [rating]="3"></app-rating-boxes>
-          </p>
-          <p class="mat-body">
-            <span style="font-weight: bold">Bred fo: </span>
-            {{ breed.breedDetails.bred_for }}
-          </p>
-          <p class="mat-body">
-            <span style="font-weight: bold">Breed Group: </span>
-            {{ breed.breedDetails.breed_group }}
-          </p>
-        </div>
+        <p class="mat-body">
+          <span style="font-weight: bold">Temparament: </span>
+          {{ breed.breedDetails.temperament }}
+        </p>
+        <p class="mat-body">
+          <span style="font-weight: bold">Origin: </span>
+          {{ breed.breedDetails.origin }}
+        </p>
+        <p class="mat-body">
+          <span style="font-weight: bold">Life Span: </span>
+          {{ breed.breedDetails.life_span }}
+        </p>
+        <p class="mat-body">
+          <span style="font-weight: bold">Adaptability: </span>
+          <app-rating-boxes [rating]="3"></app-rating-boxes>
+        </p>
+        <p class="mat-body">
+          <span style="font-weight: bold">Bred fo: </span>
+          {{ breed.breedDetails.bred_for }}
+        </p>
+        <p class="mat-body">
+          <span style="font-weight: bold">Breed Group: </span>
+          {{ breed.breedDetails.breed_group }}
+        </p>
       </div>
+    </div>
 
   </div>
   <h2>Other Photos</h2>
   <div class="other-photo-container">
-    <mat-grid-list  [cols]="isMobileScreen ? 2 : isTabScreen ? 3 : 4" rowHeight="1:1" gutterSize="10px" >
-      <mat-grid-tile *ngFor="let url of breed.breed_images" class="img-container" >
-        <img class="img" [src]="url.url" appExpand [url]="url.url"/>
+    <mat-grid-list [cols]="isMobileScreen ? 2 : isTabScreen ? 3 : 4" rowHeight="1:1" gutterSize="10px">
+      <mat-grid-tile *ngFor="let url of breed.breed_images" class="img-container">
+        <img class="img" [src]="url.url" appExpand [url]="url.url" />
       </mat-grid-tile>
     </mat-grid-list>
   </div>

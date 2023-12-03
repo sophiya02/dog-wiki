@@ -13,16 +13,16 @@
   <div class="img image2" [routerLink]="'/breeds/'+top.breed_id">
     <img [src]="top.img_url" appExpand [url]="top.img_url">
   </div>
-  <div class="text-content" >
+  <div class="text-content">
 
-<mat-divider class="mat-divider"></mat-divider>
-<div class="breeds-text">
-  <h1 class="mat-headline-1" style="font-weight: bold;" [routerLink]="'/breeds/'+top.breed_id">{{top.number}}. {{top.name}}</h1>
+    <mat-divider class="mat-divider"></mat-divider>
+    <div class="breeds-text">
+      <h1 class="mat-headline-1" style="font-weight: bold;" [routerLink]="'/breeds/'+top.breed_id">{{top.number}}.
+        {{top.name}}</h1>
 
-  <p [style.display]='top.description=="0"? "none": "block"'>{{top.description}}</p>
+      <p [style.display]='top.description=="0"? "none": "block"'>{{top.description}}</p>
 
-</div>
+    </div>
   </div>
 
 </div>
-

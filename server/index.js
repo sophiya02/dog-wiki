@@ -5,8 +5,8 @@ const app = express();
 const imageRouter = require("./route/imageRoute");
 const breedRouter = require("./route/breedRoute");
 const top10Router = require("./route/top10Route");
-const errorHandler= require('./middleware/errorHandler');
-const notFound =require('./middleware/notFound')
+const errorHandler = require("./middleware/errorHandler");
+const notFound = require("./middleware/notFound");
 
 const port = 3000;
 app.use(cors());
